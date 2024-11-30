@@ -5,7 +5,7 @@ import ProductBasket from '../components/ProductBasket';
 function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, setBasketQty, setModalBox }) {
   function ShowOrderButton() {
     if (basketQty > 0) {
-      return (<><button className="order" onClick={() => setModalBox('OrderBox')}>Участвовать</button></>)
+      return (<><button className="order" onClick={() => setModalBox('OrderBox')}>Оформить заказ</button></>)
     }
   }
 
@@ -23,7 +23,7 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
       </div>
       
     <ShowOrderButton />
-      <p> {basketPrice} </p>
+      <p>Сумма услуг {basketPrice} рублей</p>
       
     </div>
   );

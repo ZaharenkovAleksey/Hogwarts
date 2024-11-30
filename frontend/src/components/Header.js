@@ -8,7 +8,7 @@ function Header({ setPage, setModalBox, token, setToken }) {
       return (
         <>
         
-          <li onClick={() => setPage('Basket')}>События</li>
+          <li onClick={() => setPage('Basket')}>Корзина</li>
           
         </>
       )
@@ -19,12 +19,12 @@ function Header({ setPage, setModalBox, token, setToken }) {
     <div className="Header">
       <ul>
 
-       <img width="90px" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Wizarding_World_of_Harry_Potter_logo.png"></img>
+       <img width="60px" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Wizarding_World_of_Harry_Potter_logo.png"></img>
         <li onClick={() => setPage('Main')}>Главная</li>
         <BasketLink />
       </ul>
       <UserBox setModalBox={setModalBox} token={token} setToken={setToken} setPage={setPage} />
-            <img width="80px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Abenteuer_in_Hogwarts.png/640px-Abenteuer_in_Hogwarts.png"></img>
+            <img width="60px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Abenteuer_in_Hogwarts.png/640px-Abenteuer_in_Hogwarts.png"></img>
     </div>
 
   );

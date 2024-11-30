@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Main.css';
 import Product from '../components/Product';
-
+import image from '../img/image.jpg';
 
 
 function Main({ setBasket, setBasketPrice, setBasketQty, basket, setMessage, setModalBox, token }) {
@@ -23,7 +23,7 @@ function Main({ setBasket, setBasketPrice, setBasketQty, basket, setMessage, set
     if (token !== null) {
       return (
         <>
-          <button className='addProduct' onClick={() => setModalBox('AddProductBox')}>Добавить событие </button><br></br>
+          <button className='addProduct' onClick={() => setModalBox('AddProductBox')}>Добавить товар </button><br></br>
         
         </>
       )
@@ -36,7 +36,7 @@ function Main({ setBasket, setBasketPrice, setBasketQty, basket, setMessage, set
 
       <AddProduct />
       <div className='mainGrid'>
-      {products.map((item) => <Product key={item._id} id={item._id} 
+      {products.map((item) => <Product key={item._id} id={item._id} image={image}
         title={item.title} price={item.price} setBasket={setBasket}
         setBasketPrice={setBasketPrice} setBasketQty={setBasketQty}
         basket={basket} setMessage={setMessage} setModalBox={setModalBox} token={token} />)}

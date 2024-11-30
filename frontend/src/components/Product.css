@@ -2,7 +2,7 @@
 
 .Product {
     border-radius: 30px;
-    border-color: rgb(0, 0, 0);
+    border-color: black;
     border-style: solid;
     background-color: rgb(201, 236, 4);
     width: 250px;
@@ -34,10 +34,10 @@
 .Product .buy {
     border-radius: 100px;
     margin-left: -5px;
-    height: 35px;
+    height: 50px;
     width: 200px;
     border-style: solid;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
     font-size: 16pt;
 }

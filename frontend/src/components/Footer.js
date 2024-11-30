@@ -4,8 +4,8 @@ import './Footer.css';
 function Footer() {
   return (
     <div className="Footer">
-  
-  Адрес: Шотландии, Великобритания
+
+Адрес: Шотландии, Великобритания
 
 Телефон: (812) 33-22-000
 
@@ -15,11 +15,11 @@ function Footer() {
 Год основанияпосле 1019.
 
 Draco dormiens nunquam titillandus! - Никогда не щекочите спящего дракона!
-
+    
+    
+    
     </div>
   );
-
-
 }
 
 export default Footer;

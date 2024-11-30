@@ -8,7 +8,7 @@ function Product({ id, image, title, price, setBasket, setBasketPrice, setBasket
     id: id,
     image: image,
     title: title,
-    
+    price: price
   }
 
   function addToBasket() {
@@ -24,7 +24,7 @@ function Product({ id, image, title, price, setBasket, setBasketPrice, setBasket
     }
 
     setTimeout(() => {
-      setMessage('Подтвердите участие.')
+      setMessage('Товар добавлен в корзину.')
       setModalBox('MessageBox')
     }, 100)
   }
@@ -33,13 +33,13 @@ function Product({ id, image, title, price, setBasket, setBasketPrice, setBasket
     if (token !== null) {
       return (
         <>
-          <button className='buy' onClick={() => addToBasket()}>Вступить</button>
+          <button className='buy' onClick={() => addToBasket()}>Добавить</button>
         </>
       )
     } else {
       return (
         <>
-          <p>Для участия необходима авторизация</p>
+          <p>Для заказа необходима авторизация</p>
         </>
       )
     }
@@ -50,6 +50,7 @@ function Product({ id, image, title, price, setBasket, setBasketPrice, setBasket
       
       <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Hogwarts_castle.jpg/640px-Hogwarts_castle.jpg" alt='Изображение товара' />
       <h1>{product.title}</h1>
+      <p>{product.price} ₽</p>
       <AddToBasketButton />
 
     </div>

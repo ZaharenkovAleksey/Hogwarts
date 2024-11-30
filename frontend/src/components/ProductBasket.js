@@ -11,13 +11,30 @@ function ProductBasket({ id, image, title, price, setBasket, setBasketPrice, set
     setBasketQty(current => current - qty)
   }
 
+  function plus() {
+    setQty(current => current + 1)
+    setBasketPrice(current => current + price)
+    setBasketQty(current => current + 1)
+  }
+
+  function minus() {
+    if (qty > 1) {
+      setQty(current => current - 1)
+      setBasketPrice(current => current - price)
+      setBasketQty(current => current - 1)
+    }
+  }
+
   return (
     <div className="ProductBasket">
 <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Hogwarts_castle.jpg/640px-Hogwarts_castle.jpg" alt='Изображение товара' />
       <h1>{title}</h1>
-      
+      <p>{price} рублей</p>
       
       <div className='basketQty'>
+        <button className='minus' onClick={() => minus()}>-</button>
+        <p className='qty'>{qty}</p>
+        <button className='plus' onClick={() => plus()}>+</button>
       </div>
       <button className='del' onClick={() => deleteBasket()}>Удалить</button>
     </div>
